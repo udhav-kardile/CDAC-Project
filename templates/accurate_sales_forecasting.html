@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}Accurate Sales Forecasting - E-commerce Intelligence{% endblock %}
+
+{% block content %}
+    <h2 class="section-heading text-5xl font-extrabold text-gray-900 mb-12 text-center">Accurate Sales Forecasting</h2>
+
+    <div class="bg-white rounded-lg shadow-xl p-8 mb-12">
+        <h3 class="text-3xl font-bold text-gray-800 mb-6">Feature Overview & Strategic Impact</h3> {# Changed heading title slightly for impact #}
+        <p class="text-lg text-gray-700 leading-relaxed mb-4">
+            **The strategic benefits of precise sales forecasts are profound for any e-commerce operation:**
+        </p>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2 mb-6 ml-4">
+            <li><strong>Optimized Inventory Management:</strong> Minimize both costly overstocking and missed sales opportunities due to stockouts, leading to healthier cash flow and reduced holding costs.</li>
+            <li><strong>Efficient Resource Allocation:</strong> Strategically plan staffing for warehouses and customer support, optimize marketing budgets for peak periods, and allocate logistics resources effectively.</li>
+            <li><strong>Proactive Supply Chain Planning:</strong> Ensure timely procurement of goods from suppliers, mitigate supply chain disruptions, and enhance delivery reliability.</li>
+            <li><strong>Informed Strategic Decision-Making:</strong> Empower pricing adjustments, product launch timing, and long-term business expansion strategies with data-driven confidence.</li>
+            <li><strong>Maximizing Revenue Opportunities:</strong> By aligning supply precisely with predicted demand, businesses can capture every sales opportunity and boost overall profitability.</li>
+        </ul>
+        <p class="text-lg text-gray-700 leading-relaxed mt-4">
+            Ultimately, this module transforms historical data into actionable intelligence, enabling e-commerce businesses to react proactively to market dynamics, enhance operational efficiency, and secure a competitive edge.
+        </p>
+    </div>
+    {# START: Real-time Sales Forecasting Form and Result Display #}
+    <div class="bg-white p-8 rounded-xl shadow-xl mb-12 max-w-3xl mx-auto">
+        <h3 class="text-3xl font-bold text-gray-800 mb-6 text-center">Generate Sales Forecast</h3>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6 text-center">
+            Enter the number of future periods (e.g., weeks or months) for which you want to forecast sales.
+        </p>
+
+        <form method="POST" action="{{ url_for('forecasting_route') }}" class="space-y-6">
+            <div class="form-group">
+                <label for="periods" class="text-lg">Number of Periods to Forecast (e.g., 4 for 4 weeks):</label>
+                <input type="number" id="periods" name="periods" required min="1" max="52"
+                       class="w-full mt-1 p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 shadow-sm text-gray-800"
+                       placeholder="e.g., 4" value="{{ request.form.get('periods', '1') }}">
+            </div>
+            <button type="submit" class="form-button form-button-primary w-full md:w-auto px-6 py-3 text-lg">Generate Forecast</button>
+        </form>
+
+        {% if result %}
+            <div class="result-box mt-8">
+                <h3 class="text-2xl font-bold border-b pb-2 mb-4 border-blue-400">Forecast Result:</h3>
+                {% if result.error %}
+                    <p class="error-message text-red-700 text-lg"><strong>Error:</strong> {{ result.error }}</p>
+                    <p class="text-gray-700 mt-2">Please ensure the sales forecasting service is available and inputs are valid.</p>
+                {% else %}
+                    <p class="text-lg mb-4"><strong>Forecast for next {{ result.periods }} periods:</strong></p>
+                    <ul class="list-disc list-inside space-y-1 ml-4 text-gray-700">
+                        {% for date, value in result.forecast %}
+                            <li><strong>{{ date }}:</strong> <span class="font-semibold text-green-700">{{ value | format_currency }}</span></li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+    {# END: Real-time Sales Forecasting Form and Result Display #}
+    <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden h-[500px] md:h-[650px] flex items-center justify-center p-4">
+                    <!-- Replace the src below with the direct link to your image hosted on GitHub -->
+                    <img
+                        src="https://raw.githubusercontent.com/TechwithRahul2003/Olist-E-Commerce-Analysis/main/pacf.png"
+                        alt="Customer Buying Pattern Graph"
+                        class="w-full h-full object-contain rounded-md"
+                        onerror="this.onerror=null;this.src='https://placehold.co/1200x600/E0E0E0/333333?text=Image+Load+Error';"
+                    >
+    </div>
+<div class="bg-gray-100 rounded-lg shadow-md overflow-hidden h-[500px] md:h-[650px] flex items-center justify-center p-4">
+                    <!-- Replace the src below with the direct link to your image hosted on GitHub -->
+                    <img
+                        src="https://raw.githubusercontent.com/TechwithRahul2003/Olist-E-Commerce-Analysis/main/prophet.png"
+                        alt="Customer Buying Pattern Graph"
+                        class="w-full h-full object-contain rounded-md"
+                        onerror="this.onerror=null;this.src='https://placehold.co/1200x600/E0E0E0/333333?text=Image+Load+Error';"
+                    >
+    </div>
+    <div class="bg-white rounded-lg shadow-xl p-8">
+        <h3 class="text-3xl font-bold text-gray-800 mb-6">Dedicated Dashboard View</h3>
+        <p class="text-lg text-gray-700 leading-relaxed mb-4">
+            Access a Power BI dashboard focused on sales forecasts, displaying predicted sales
+            volumes, trend analysis, and inventory optimization recommendations.
+        </p>
+        <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden h-[500px] md:h-[650px] flex items-center justify-center p-4">
+            <iframe
+                src="https://app.powerbi.com/reportEmbed?reportId=22b0124a-4508-44f6-ac6a-2c1a79fd39ca&autoAuth=true&ctid=cc819eae-433f-4ebe-8a84-8e6f68ae7345"
+                frameborder="0"
+                allowFullScreen="true"
+                class="w-full h-full"
+            ></iframe>
+        </div>
+        <p class="text-center text-gray-600 mt-4">
+            *Note: This is an example embed. Update the `src` attribute if you have a dedicated Power BI report.*
+        </p>
+    </div>
+{% endblock %}
