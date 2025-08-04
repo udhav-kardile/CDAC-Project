@@ -9,7 +9,7 @@ An end-to-end data science solution on the Olist Brazilian e-commerce dataset. I
 ## 📷 Snapshots
 
 ### 1. Power BI Dashboard
-![Power BI Dashboard](images/powerbi_dashboard.png)
+![Power BI Dashboard](images/dashboard.png)
 
 ### 2. Sentiment Analysis Web App (Flask UI)
 ![Sentiment Flask UI](images/sentiment_flask_ui.png)
