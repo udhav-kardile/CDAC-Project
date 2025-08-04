@@ -1,12 +1,23 @@
 
-# 🛒 Brazilian Olist E-Commerce Analytics Platform
+# 🛒 Brazilian Olist E-Commerce Analytics
 
-## 🚀 Project Overview
-An end-to-end data science solution on the Olist Brazilian e-commerce dataset. It integrates multiple pipelines, ML models, and dashboards to generate insights for e-commerce platforms.
+##  Project Overview
+This project uses past data from Olist to find useful insights with the help of data analysis, machine learning, and easy-to-understand visuals made in Power BI.
+
+Key Components of the Project:
+
+- Sentiment Analysis:
+Analyzed customer reviews to understand opinions and satisfaction levels.
+- Time Series Forecasting:
+Predicted future trends like order volume and revenue using historical data patterns.
+- Customer, Seller & Product Segmentation:
+Grouped customers, sellers, and products based on behavior and characteristics for better targeting.
+- Delay Delivery Analysis (Prevention):
+Identified and analyzed factors causing delays in delivery using Spark SQL.
 
 ---
 
-## 📷 Snapshots
+##  Snapshots
 
 ### 1. Power BI Dashboard
 ![Power BI Dashboard](images/dashboard.png)
@@ -22,7 +33,7 @@ An end-to-end data science solution on the Olist Brazilian e-commerce dataset. I
 
 ---
 
-## 🧠 Goals
+##  Goals
 - Customer sentiment analysis from reviews
 - Forecast sales trends
 - delivery delays estimation
@@ -31,7 +42,7 @@ An end-to-end data science solution on the Olist Brazilian e-commerce dataset. I
 
 ---
 
-## 🔧 Tech Stack
+##  Tech Stack
 | Area            | Tools |
 |-----------------|-------|
 | Programming     | Python, SQL |
@@ -43,12 +54,12 @@ An end-to-end data science solution on the Olist Brazilian e-commerce dataset. I
 
 ---
 
-## 📁 Dataset
+##  Dataset
 Source: [Kaggle - Olist Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
 ---
 
-## 👥 Contributors
+##  Contributors
 - Team 007 members
 - Guide: Sumit Bansod sir
 - Mentor: Prashant Bhosale sir
@@ -56,11 +67,11 @@ Source: [Kaggle - Olist Dataset](https://www.kaggle.com/datasets/olistbr/brazili
 
 ---
 
-## 📌 Contact
+##  Contact
 📧 udhavkardile7502@gmail.com  
 🔗 https://www.linkedin.com/in/udhavk2309/
 
 ---
 
-## 📎 License
+##  License
 MIT License
