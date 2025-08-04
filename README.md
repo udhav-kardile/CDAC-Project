@@ -25,7 +25,7 @@ An end-to-end data science solution on the Olist Brazilian e-commerce dataset. I
 ## 🧠 Goals
 - Customer sentiment analysis from reviews
 - Forecast sales trends
-- Predict delivery delays
+- delivery delays estimation
 - Understand customer buying behavior
 - Dashboard for non-tech users
 
@@ -36,7 +36,7 @@ An end-to-end data science solution on the Olist Brazilian e-commerce dataset. I
 |-----------------|-------|
 | Programming     | Python, SQL |
 | Data Processing | Pandas, Spark SQL |
-| ML & DL         | Scikit-learn, Prophet, XGBoost, Hugging Face |
+| ML & DL         | Scikit-learn, ARIMA/SARIMA, Prophet, XGBoost, BERT, Hugging Face |
 | Web App         | Flask |
 | Dashboard       | Power BI |
 | Deployment      | GitHub Actions, AWS, Azure |
@@ -49,15 +49,16 @@ Source: [Kaggle - Olist Dataset](https://www.kaggle.com/datasets/olistbr/brazili
 ---
 
 ## 👥 Contributors
-- Udhav (You)
-- [Mentor Name]
-- [Team Members]
+- Team 007 members
+- Guide: Sumit Bansod sir
+- Mentor: Prashant Bhosale sir
+![Contribution](images/team.png)
 
 ---
 
 ## 📌 Contact
-📧 [Your Email]  
-🔗 [LinkedIn Profile]
+📧 udhavkardile7502@gmail.com  
+🔗 https://www.linkedin.com/in/udhavk2309/
 
 ---
 
