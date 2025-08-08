@@ -15,6 +15,9 @@ Grouped customers, sellers, and products based on behavior and characteristics f
 - Delay Delivery Analysis (Prevention):
 Identified and analyzed factors causing delays in delivery using Spark SQL.
 
+## Preview
+![Project Demo](images/gif.gif)
+
 ---
 
 ##  Snapshots
