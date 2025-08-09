@@ -1,8 +1,8 @@
 
-# 🛒 Brazilian Olist E-Commerce Analytics
+# 🛒 Olist E-Com Analytics
 
 ##  Project Overview
-This project uses past data from Olist to find useful insights with the help of data analysis, machine learning, and easy-to-understand visuals made in Power BI.
+This project uses past data from Olist to find useful insights with the help of data analysis, machine learning, and easy-to-understand visuals made using Power BI.
 
 Key Components of the Project:
 
@@ -37,11 +37,11 @@ Identified and analyzed factors causing delays in delivery using Spark SQL.
 ---
 
 ##  Goals
-- Customer sentiment analysis from reviews
-- Forecast sales trends
-- delivery delays estimation
-- Understand customer buying behavior
-- Dashboard for non-tech users
+- Customer Sentiment Analysis
+- Forecasting Sales Trends 
+- Delivery Delay Detection
+- Understand Customer Buying Patterns
+- Dashboard: Visualize Data
 
 ---
 
@@ -64,7 +64,7 @@ Source: [Kaggle - Olist Dataset](https://www.kaggle.com/datasets/olistbr/brazili
 
 ##  Contributors
 - Team 007 members
-- Guide: Sumit Bansod sir
+- Guide: Sumit Patil
 - Mentor: Prashant Bhosale sir
 ![Contribution](images/team.png)
 
